@@ -1,0 +1,24 @@
+{% block content %}
+<body class="display_body">
+  <section>
+    <h1 class="display-4 mb-4 text-center">
+      Voters Informations
+    </h1>
+<div class="container text-center">
+  {% if emps %}
+    {% for i in emps %}
+        <div class="box_1">
+            
+            <h2>{{ i.name }}</h2>
+            <p>{{ i.desc }}</p>
+        </div>
+    {% endfor %}
+  {% else %}
+        <div class="col-md-12">
+          <p>No members Available</p>
+        </div>
+  {% endif %}
+    </div>
+  </section>
+</body>
+{% endblock %}
