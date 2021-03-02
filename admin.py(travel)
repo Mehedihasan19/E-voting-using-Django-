@@ -1,0 +1,9 @@
+from django.contrib import admin
+from .models import voters
+from .models import authority
+from .models import candidate
+# Register your models here.
+
+admin.site.register(voters)
+admin.site.register(authority)
+admin.site.register(candidate)
