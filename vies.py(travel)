@@ -1,0 +1,22 @@
+from django.shortcuts import render
+from .models import voters
+# Create your views here.
+
+def travel(request):
+
+    dest1 = voters.objects.all()
+    
+    return render(request, "eVoting.html",{'dest1' : dest1})
+
+
+
+def checking(request):
+
+       emp = voters.objects.all()
+       context = {
+                'emps' : emp
+       }
+    
+       return render(request,'check.html', context)
+
+
