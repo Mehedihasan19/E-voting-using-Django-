@@ -1,0 +1,18 @@
+from django.db import models
+
+# Create your models here.
+class voters(models.Model):
+    id=models.IntegerField(primary_key=True)
+    name = models.CharField(max_length=100)
+    desc = models.TextField()
+    img = models.ImageField(upload_to='pics')
+
+class authority(models.Model):
+    id= models.IntegerField(primary_key= True)
+    name=models.CharField(max_length=100)
+    img=models.ImageField(upload_to='pics')
+
+class candidate(models.Model):
+    name = models.CharField(max_length=100)
+    position= models.CharField(max_length=100)    
+    sign=models.ImageField(upload_to='pics')
